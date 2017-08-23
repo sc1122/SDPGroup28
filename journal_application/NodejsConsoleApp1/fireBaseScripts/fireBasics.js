@@ -20,25 +20,28 @@ exports.search_user = function (admin, startServer) {
     var array = new Array();
     var count = 0;
     var ref = admin.database().ref("user_db/user");
-    var user;
-    ref.on("value", function (snapshot) {
-        console.log(snapshot.val());
+    var user = 'Ben';
+    ref.child(user).once("value", function (snapshot) {
+        
         
         snapshot.forEach(function (data) {
+            var temp = data.val();
+            console.log(temp.Text);
             console.log("*");
-            user = data;
-            console.log(data.key);
-            array[count] = data.key;
+            console.log(data.val());
+            console.log(data.ref.toString());
+            array[count] = temp.Text;
             count += 1;
         });
-        startServer(array);
+        startServer(array, user);
     });
 
 }
 
-exports.startServer = function (cat) {
-    httpBoot.bootTestServer(cat);
-    console.log(cat[0]);
+exports.startServer = function (cat, user) {
+    httpBoot.bootTestServer(cat, user);
+    //console.log(cat[0]);
+    //console.log(cat[0]);
     console.log("Async finished");
 }
 

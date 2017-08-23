@@ -24,8 +24,8 @@ console.log('Initializing Firebase');
 //fireBasic is a script library that will be used for the basic functionality of manipulating the fireBase database
 //the upload_food module takes (Firebase_reference, food_name, food_weight[Grams], food_calories, food_protein, food_fat, food_category) as args
 
-fireBasic.upload_user(admin, 'Seb', 'I like aeroplane jelly');
-fireBasic.upload_user(admin, 'Ben', 'I like big butts and i can not lie');
+fireBasic.upload_user(admin, 'Seb', 'Hello World');
+fireBasic.upload_user(admin, 'Ben', 'How are you class?');
 
 
 //This logs when uploads to the database are handled
