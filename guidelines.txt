@@ -1,7 +1,0 @@
-Guidelines for commiting and pushing changes:
-	- Commit message must state what changes made
-	- DO NOT commit to master branch before you have gone through the QA process 
-	  and has the all clear from the rest of the group
-	- If working on isolated issue/feature make a new cloned branch first
-	- Ensure that files are stored in appropriate locations
-	- Use pre-defined naming conventions and documentation guidelines.
